@@ -10,18 +10,10 @@ $(document).ready(function(){
     })
 })
 
-$('[name="radioPOCDetails"]').on('change', function(){  
-    if($(this).val()  === "yes"){
-      $('#collapsePOC').collapse('show')
-    }else{
-       $('#collapsePOC').collapse('hide')
-    }
-  });
+$("input[name='radioGuests']").change(function() {
+    $("#collapseGuests").toggle();
+});
 
-$('[name="radioGuests"]').on('change', function(){  
-    if($(this).val()  === "yes"){
-      $('#collapseGuests').collapse('show')
-    }else{
-       $('#collapseGuests').collapse('hide')
-    }
-  });
+$("input[name='radioPOCDetails']").change(function() {
+    $("#collapsePOCDetails").toggle();
+});

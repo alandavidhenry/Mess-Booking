@@ -57,21 +57,20 @@
                         <div class="mb-3">
                             <p>Will you be bringing guests?</p>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="radioGuests" id="radioGuests1" checked>
+                                <input class="form-check-input" type="radio" name="radioGuests" id="radioGuests1" value="1" checked>
                                 <label class="form-check-label" for="radioGuests1">
                                     No
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="radioGuests" id="radioGuests2" data-bs-toggle="collapse" 
-                                data-bs-target="#collapseGuests" aria-expanded="false" aria-controls="collapseGuests">
+                                <input class="form-check-input" type="radio" name="radioGuests" id="radioGuests2" value="2">
                                 <label class="form-check-label" for="radioGuests2">
                                     Yes
                                 </label>
                             </div>
                         </div>
                         <!-- Hidden if no guests selected -->
-                        <div class="collapse" id="collapseGuests">
+                        <div id="collapseGuests">
                             <div class="row mb-3">
                                 <div class="col-sm-3">
                                     <label for="inputGuestTitle1" class="form-label">Guest title</label>
@@ -86,7 +85,6 @@
                                 Members are reminded that they must host their guest at all times and there is a £10.00 cleaning and maintenance bill per stay.
                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
-                            <!-- Hidden if no guests selected -->
                             <div class="mb-3">
                                 <p>What kind of room will you require?</p>
                                 <div class="form-check">
@@ -152,21 +150,34 @@
                 <div class="card mb-4">
                     <div class="card-body">
                         <h3>Point of contact details</h3>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="radioPOCDetails" id="radioPOCDetails1" checked>
+                        <!-- <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioPOCDetails" id="radioPOCDetails1" value="1" checked>
                             <label class="form-check-label" for="radioPOCDetails1">
                                 Same as above
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="radioPOCDetails" id="radioPOCDetails2" data-bs-toggle="collapse" 
-                            data-bs-target="#collapsePOC" aria-expanded="false" aria-controls="collapsePOC">
+                            <input class="form-check-input" type="radio" name="radioPOCDetails" id="radioPOCDetails2" value="2">
                             <label class="form-check-label" for="radioPOCDetails2">
                                 Different to above
                             </label>
+                        </div> -->
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioPOCDetails" id="radioPOCDetails1" value="1" checked>
+                            <label class="form-check-label" for="radioPOCDetails1">
+                                No
+                            </label>
                         </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioPOCDetails" id="radioPOCDetails2" value="2">
+                            <label class="form-check-label" for="radioPOCDetails2">
+                                Yes
+                            </label>
+                        </div>
+
                         <!-- Hidden if "Same as above" selected -->
-                        <div class="collapse" id="collapsePOC">
+                        <div id="collapsePOCDetails">
                             <div class="mb-3">
                                 <label for="inputServiceNumber" class="form-label">Service number</label>
                                 <div class="col-md-2">
