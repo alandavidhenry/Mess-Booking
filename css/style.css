@@ -1,0 +1,35 @@
+body {
+    font-family: 'Manrope', sans-serif;
+}
+
+a.link-light {
+    color: white;
+    font-weight: 700;
+}
+
+a:hover.link-light {
+    color: white;
+    background-color: black;
+}
+a.link-dark {
+    color: black;
+    font-weight: 700;
+}
+
+a:hover.link-dark {
+    color: white;
+    background-color: black;
+}
+
+#hero-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(/img/Wellington-Barracks-1600x1067.jpg);
+    background-size: cover;
+    height: 40vh;
+}
+#hero-title {
+    font-weight: 500;
+}
+
+#collapseRules li {
+    margin-bottom: 0.7rem;
+}

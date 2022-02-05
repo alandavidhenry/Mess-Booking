@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="/js/app.js" async></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- Bootstrap Date-Picker Plugin -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+        <title>Mess Booking Home</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand pe-4" href="home.html">
+                <img src="/img/londist_200.jpg" alt="" width="30" height="30" class="d-inline-block align-text-top">
+                LCG Mess Booking
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <a class="nav-link active" aria-current="page" href="home.html">Book a room</a>
+                    <a class="nav-link" href="#">Book a meal</a>
+                </ul>
+                <ul class="navbar-nav">   
+                    <a class="nav-link ms-auto" href="login.html">Login</a>
+                    <a class="nav-link" href="register.html">Register</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="p-4 text-center text-light" id="hero-img">
+        <h1 class="display-1 mb-3" id="hero-title">Book a room</h1>
+        <p class="lead pb-3">Please <a href="login.html" class="link-light">login</a> or <a href="register.html" class="link-light">register</a> then fill in the form below to book a room for yourself and your guests.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Book a room</a>
+    </div>
+
+    <div class="container my-3">
+        <h1 class="mb-4">Book a room</h1>
+        <p>Please <a href="login.html" class="link-dark">login here</a> to book a room, or <a href="register.html" class="link-dark">register</a> if you do not already have an account.</p>
+        <p>Please fill in the form below to book a room:</p>
+            <form class="container-fluid mt-5">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3>Guests</h3>
+                        <div class="mb-3">
+                            <p>Will you be bringing guests?</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioGuests" id="radioGuests1" checked>
+                                <label class="form-check-label" for="radioGuests1">
+                                    No
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioGuests" id="radioGuests2" data-bs-toggle="collapse" 
+                                data-bs-target="#collapseGuests" aria-expanded="false" aria-controls="collapseGuests">
+                                <label class="form-check-label" for="radioGuests2">
+                                    Yes
+                                </label>
+                            </div>
+                        </div>
+                        <!-- Hidden if no guests selected -->
+                        <div class="collapse" id="collapseGuests">
+                            <div class="row mb-3">
+                                <div class="col-sm-3">
+                                    <label for="inputGuestTitle1" class="form-label">Guest title</label>
+                                    <input type="text" class="form-control" id="inputGuestTitle1" aria-describedby="First guest title" placeholder="Title">
+                                </div>
+                                <div class="col-sm-9">
+                                    <label for="inputGuestName1" class="form-label">Guest name</label>
+                                    <input type="text" class="form-control" id="inputGuestName1" aria-describedby="First guest name" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                Members are reminded that they must host their guest at all times and there is a £10.00 cleaning and maintenance bill per stay.
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                            <!-- Hidden if no guests selected -->
+                            <div class="mb-3">
+                                <p>What kind of room will you require?</p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radioRoomType" id="radioRoomType1" checked>
+                                    <label class="form-check-label" for="radioRoomType1">
+                                        Single bunk
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radioRoomType" id="radioRoomType2">
+                                    <label class="form-check-label" for="radioRoomType2">
+                                        Family room
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3>Details about your stay</h3>
+                        <div class="mb-3">
+                            <label for="inputReasonForStay" class="form-label">Reason for stay</label>
+                            <input type="text" class="form-control" id="inputReasonForStay" aria-describedby="Reason for stay" placeholder="Reason for stay">
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-6">
+                                <label class="form-label" for="arrivalDate">Arrival date</label>
+                                <input class="form-control" id="arrivalDate" name="date" placeholder="DD/MM/YYY" type="text">
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="form-label" for="inputArrivalTime">Arrival time</label>
+                                <input type="text" class="form-control" id="inputArrivalTime" aria-describedby="Arrival time" placeholder="00:00">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-6">
+                                <label class="form-label" for="departureDate">Departure date</label>
+                                <input class="form-control" id="departureDate" name="date" placeholder="DD/MM/YYY" type="text">
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="form-label" for="inputDepartureTime">Departure time</label>
+                                <input type="text" class="form-control" id="inputDepartureTime" aria-describedby="Departure time" placeholder="00:00">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <p>Will you require bedding?</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioBeddingRequired" id="radioBeddingRequired1" checked>
+                                <label class="form-check-label" for="radioBeddingRequired1">
+                                    Yes
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioBeddingRequired" id="radioBeddingRequired2">
+                                <label class="form-check-label" for="radioBeddingRequired2">
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3>Point of contact details</h3>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioPOCDetails" id="radioPOCDetails1" checked>
+                            <label class="form-check-label" for="radioPOCDetails1">
+                                Same as above
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioPOCDetails" id="radioPOCDetails2" data-bs-toggle="collapse" 
+                            data-bs-target="#collapsePOC" aria-expanded="false" aria-controls="collapsePOC">
+                            <label class="form-check-label" for="radioPOCDetails2">
+                                Different to above
+                            </label>
+                        </div>
+                        <!-- Hidden if "Same as above" selected -->
+                        <div class="collapse" id="collapsePOC">
+                            <div class="mb-3">
+                                <label for="inputServiceNumber" class="form-label">Service number</label>
+                                <div class="col-md-2">
+                                    <input type="text" class="form-control" id="inputServiceNumber" placeholder="30123456">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-2">
+                                    <label for="selectRank" class="form-label">Rank</label>
+                                        <select class="form-select" id="selectRank" aria-label="Select your rank">
+                                            <option selected>Rank</option>
+                                            <option value="1">LSgt</option>
+                                            <option value="2">Sgt</option>
+                                            <option value="3">CSgt</option>
+                                            <option value="3">WO2</option>
+                                            <option value="3">WO1</option>
+                                        </select>
+                                </div>
+                                <div class="col-sm-5">
+                                    <label for="inputFirstName" class="form-label">First name</label>
+                                    <input type="text" class="form-control" id="inputFirstName" placeholder="First name">
+                                </div>
+                                <div class="col-sm-5">
+                                    <label for="inputLastName" class="form-label">Last name</label>
+                                    <input type="text" class="form-control" id="inputLastName" placeholder="Last name">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputUnit" class="form-label">Unit</label>
+                                <input type="text" class="form-control" id="inputUnit" placeholder="Unit">
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-4">
+                                    <label for="inputContactNumber" class="form-label">Contact number</label>
+                                    <input type="tel" class="form-control" id="inputContactNumber" placeholder="00000000000">
+                                </div>
+                                <div class="col-sm-8">
+                                    <label for="inputEmail" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="inputEmail" placeholder="name@email.com">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse show" id="collapseRules">
+                    <div class="alert alert-warning">
+                        <ol>
+                            <li>Please note, that due to the high turnover in accommodation, rooms will not be available until 
+                                15:00 hrs on day of arrival, and must be vacated by 10:00 hrs on day of departure. If keys are 
+                                not returned on time, the member who has booked the accommodation will be billed for a new lock. 
+                                Damages will follow the same process. NO EXCEPTIONS.</li>
+                            <li>One booking request per room. NO EXCEPTIONS. Requests will not be actioned that ask for multiple rooms.</li>
+                            <li>Requests for accommodation can ONLY be made by email.</li>
+                            <li>Confirmation is by e.mail only, within 2-3 working days.</li>
+                            <li>If you book a room and do not collect your key without good reason, you will be declined from booking accommodation in the future.</li>
+                            <li>Please ensure that you have read the <a class="link-dark" data-bs-toggle="modal" href="#rulesModal">Sgts mess rules</a>before arrival and more importantly, your guests do.</li>
+                            <li>All bookings will be confirmed via return email within 2-3 working days.</li>
+                        </ol>	
+                    </div>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" value="" id="checkRules" data-bs-toggle="collapse" 
+                            data-bs-target="#collapseRules" aria-expanded="true" aria-controls="collapseRules">
+                    <label class="form-check-label" for="checkRules">I have read and agree to the rules.</label>
+                </div>
+                <button type="submit" class="btn btn-primary col-sm-3 mb-5">Book</button>
+            </form>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="rulesModal" tabindex="-1" aria-labelledby="rulesModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="rulesModalLabel">Sergrant's Mess Rules</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident totam repellendus, asperiores ipsum eligendi excepturi sint dolore dolorem ducimus aspernatur voluptatum inventore mollitia nostrum quia laborum rerum quae quam veniam?
+                Voluptates eveniet laudantium deserunt inventore eos delectus sed aliquid molestias. Architecto tenetur est, perferendis molestias reiciendis inventore beatae nihil ab recusandae consectetur nam, quia ex expedita, quam officia quas quisquam?
+                Rem autem cupiditate eos suscipit molestiae nobis modi ad. Eos ipsum dolor ipsam voluptates commodi temporibus ex provident dolores libero excepturi. Earum minima iure nostrum obcaecati magnam necessitatibus voluptatum aliquam!
+                Laudantium ex labore, nisi impedit placeat ab ratione nesciunt. Provident velit sunt rem aperiam facere tempora qui repudiandae libero, dignissimos culpa placeat! Adipisci voluptas harum exercitationem sequi. Dolores, aliquam dignissimos.
+                Dolorem eum, eaque placeat, architecto enim, voluptatem ipsum sint iure impedit amet sequi aliquam quam. Libero, tempore accusamus sed similique voluptatem porro eligendi, amet quia, fugiat quis doloremque. Fuga, ab?
+                Vitae necessitatibus suscipit quaerat fugit possimus distinctio amet corrupti, veritatis, hic quis ex? Magnam maiores consectetur vitae nihil culpa, dolorem minus, aspernatur quibusdam praesentium laudantium veniam aliquam perspiciatis a cupiditate.
+                Nihil numquam molestias natus officiis quibusdam dolorem animi exercitationem totam sit possimus laborum ab doloribus, tenetur minima esse asperiores, enim modi praesentium. Magni, quis similique commodi aspernatur expedita explicabo provident!
+                Quia accusantium quam ex officia deserunt sed aspernatur veniam atque iusto magni deleniti voluptate consequatur quasi, quisquam mollitia expedita voluptates suscipit reprehenderit labore error. Enim et inventore autem eius. Rerum.
+                Quo consectetur nulla animi reprehenderit, porro cumque exercitationem, ipsam rerum odit impedit quia dicta optio dolorem error? Consequuntur quaerat tempora, consequatur expedita inventore odit quidem debitis, sunt quis nesciunt nostrum.
+                Voluptatum iusto rem quod quo deserunt debitis illo architecto, nulla maiores. Quae a omnis veritatis accusamus iure iste repellendus veniam laboriosam necessitatibus saepe ipsum, eligendi perferendis pariatur quasi esse quo!</p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
