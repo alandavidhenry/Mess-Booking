@@ -22,7 +22,7 @@ a:hover.link-dark {
 }
 
 #hero-img {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(/img/Wellington-Barracks-1600x1067.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(img/Wellington-Barracks-1600x1067.jpg);
     background-size: cover;
     height: 40vh;
 }
